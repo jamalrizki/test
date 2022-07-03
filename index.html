@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/ad07d13b39.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <H1>Chess</H1>
+    <H2 id="welcomeText">Welcome!</H2>
+    <a href="rules.html" target="popup"
+        onclick="window.open('rules.html','popup','width=600,height=600'); return false;">
+        How To Play!
+    </a>
+    <!-- B=black, W=white, QS=queen's side, KS=King's side, (1 is Qs and 8 is Ks), Black is in row 7 and 8, White is row 1 and 2-->
+    <div id="board">
+        <!-- Row 8 -->
+        <div class="white square">
+            <div class="blackPiece" id="rookQsB" draggable="true"><i class="fa-solid fa-chess-rook"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="blackPiece" id="knightQsB" draggable="true"><i class="fa-solid fa-chess-knight"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="blackPiece" id="bishopQsB" draggable="true"><i class="fa-solid fa-chess-bishop"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="blackPiece" id="queenB" draggable="true"><i class="fa-solid fa-chess-queen"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="blackPiece" id="kingB" draggable="true"><i class="fa-solid fa-chess-king"></i></div>
+        </div>
+        <div class="black square">
+            <div class="blackPiece" id="bishopKsB" draggable="true"><i class="fa-solid fa-chess-bishop"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="blackPiece" id="knightKsB" draggable="true"><i class="fa-solid fa-chess-knight"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="blackPiece" id="rookKsB" draggable="true"><i class="fa-solid fa-chess-rook"></i>
+            </div>
+        </div>
+        <!-- row 7 -->
+        <div class="black square">
+            <div class="blackPiece" id="pawn1B" draggable="true"><i class="fa-solid fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="blackPiece" id="pawn2B" draggable="true"><i class="fa-solid fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="blackPiece" id="pawn3B" draggable="true"><i class="fa-solid fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="blackPiece" id="pawn4B" draggable="true"><i class="fa-solid fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="blackPiece" id="pawn5B" draggable="true"><i class="fa-solid fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="blackPiece" id="pawn6B" draggable="true"><i class="fa-solid fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="blackPiece" id="pawn7B" draggable="true"><i class="fa-solid fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="blackPiece" id="pawn8B" draggable="true"><i class="fa-solid fa-chess-pawn"></i>
+            </div>
+        </div>
+        <!-- Row 6 -->
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <!-- row 5 -->
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <!-- Row 4 -->
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <!-- row 3 -->
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <div class="black square"></div>
+        <div class="white square"></div>
+        <!-- Row 2 -->
+        <div class="white square">
+            <div class="whitePiece" id="pawn1W" draggable="true"><i class="fa-regular fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="whitePiece" id="pawn2W" draggable="true"><i class="fa-regular fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="whitePiece" id="pawn3W" draggable="true"><i class="fa-regular fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="whitePiece" id="pawn4W" draggable="true"><i class="fa-regular fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="whitePiece" id="pawn5W" draggable="true"><i class="fa-regular fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="whitePiece" id="pawn6W" draggable="true"><i class="fa-regular fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="whitePiece" id="pawn7W" draggable="true"><i class="fa-regular fa-chess-pawn"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="whitePiece" id="pawn8W" draggable="true"><i class="fa-regular fa-chess-pawn"></i>
+            </div>
+        </div>
+        <!-- row 1 -->
+        <div class="black square">
+            <div class="whitePiece" id="rookQsW" draggable="true"><i class="fa-regular fa-chess-rook"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="whitePiece" id="knightQsW" draggable="true"><i class="fa-regular fa-chess-knight"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="whitePiece" id="bishopQsW" draggable="true"><i class="fa-regular fa-chess-bishop"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="whitePiece" id="queenW" draggable="true"><i class="fa-regular fa-chess-queen"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="whitePiece" id="kingW" draggable="true"><i class="fa-regular fa-chess-king"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="whitePiece" id="bishopKsW" draggable="true"><i class="fa-regular fa-chess-bishop"></i>
+            </div>
+        </div>
+        <div class="black square">
+            <div class="whitePiece" id="knightKsW" draggable="true"><i class="fa-regular fa-chess-knight"></i>
+            </div>
+        </div>
+        <div class="white square">
+            <div class="whitePiece" id="rookKsW" draggable="true"><i class="fa-regular fa-chess-rook"></i>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
